@@ -13,14 +13,14 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('mongo_db')
-            ->children()
-            ->scalarNode('db')
-                ->cannotBeEmpty()
-            ->end()
-            ->scalarNode('host')
-                ->cannotBeEmpty()
-            ->end()
+        $treeBuilder->root('mongo_db')
+                ->children()
+                ->scalarNode('db')
+                    ->cannotBeEmpty()
+                ->end()
+                ->scalarNode('host')
+                    ->cannotBeEmpty()
+                ->end()
             ->end()
         ;
 

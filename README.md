@@ -17,7 +17,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Budby\MongoDbBundle(),
+        new Budby\MongoDbBundle\MongoDbBundle(),
     );
 }
 ```
