@@ -59,47 +59,11 @@ class MongoDbManager
     /**
      * @param array $options
      *
-     *
+     * @return mixed
      */
     public function aggregateData(array $options)
     {
-        $cursor = $this->client->$collectionName->aggregate($options);
-
-        /*
-
-        Controller:
-
-        $mongoDbManager = $this->get('mongodb.manager');
-        $mongoDbManager->createIndex('test_4', ['name' => 1]);
-        $mongoDbManager->insertOne('test_4', [
-            'name'     => 'name_1',
-            'datetime' => $mongoDbManager->typeUTCDateTime(new \DateTime())
-        ]);
-
-        -----------
-        Example:
-
-        ['$match' =>
-            [
-                'name' => [
-                    '$not'    => ['$type' => 10],
-                    '$exists' => true,
-                ],
-            ],
-        ],
-        ['$group' => ['_id' => '$word', 'count' => ['$sum' => 1]]],
-        ['$sort' => ['datetime' => 1]]
-
-
-        see: https://docs.mongodb.com/php-library/master/tutorial/collation/#aggregation
-        */
-
-        // TODO: move out
-        foreach ($cursor as $document) {
-            $document['_id'] = $this->gerenateId();
-            $document['datetime'] = $this->typeUTCDateTime(new \DateTime());
-            $this->insertOne($collectionName, $document)->insertOne($document);
-        }
+        return $this->client->$collectionName->aggregate($options);
     }
 
     /**
