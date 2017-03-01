@@ -1,0 +1,31 @@
+{
+    "name": "budby/mongodb-symfony-bundle",
+    "description": "Symfony2 bundle for integrating MongoDB",
+    "keywords" : [
+        "symfony2",
+        "symfony3",
+        "mongo",
+        "mongodb",
+        "db",
+        "nosql"
+    ],
+    "version": "1.0.0",
+    "type": "symfony-bundle",
+    "homepage": "https://github.com/budby/mongodb-symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name"    : "budby",
+            "email"   : "dmitry.budnitski@gmail.com",
+            "role"    : "developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/symfony": ">=2.1",
+        "mongodb/mongodb": "^1.1.2"
+    },
+    "autoload": {
+        "psr-4": { "Budby\\MongoDbBundle\\": "" }
+    }
+}
