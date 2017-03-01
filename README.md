@@ -37,6 +37,6 @@ Usage
 $mongoDbManager = $this->get('budby_mongodb.manager');
 $mongoDbManager->createIndex('collection_name', ['name' => 1]);
 $mongoDbManager->insertOne('collection_name', [
-    'datetime' => $mongoDbManager->typeUTCDateTime(new \DateTime())
+    'datetime' => $mongoDbManager->generateUTCDateTime(new \DateTime())
 ]);
 ```
