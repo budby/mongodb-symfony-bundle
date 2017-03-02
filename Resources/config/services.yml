@@ -1,9 +1,9 @@
 parameters:
-    db:   '%mongodb.db%'
-    host: '%mongodb.host%'
+    db:   '%budby_mongodb.db%'
+    host: '%budby_mongodb.host%'
 
 services:
-    mongodb.manager:
-        class: Budby\MongoDbBundle\Manager\MongoDbManager
+    budby_mongodb.manager:
+        class: Budby\MongoDbBundle\Manager\BudbyMongoDbManager
         calls:
             - [ setConfigData, [ '%db%', '%host%' ] ]
