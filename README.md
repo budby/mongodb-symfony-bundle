@@ -4,7 +4,7 @@ Installation
 ------------
 
 ```bash
-composer require "budby/budby/mongodb-symfony-bundle"
+composer require "budby/mongodb-symfony-bundle"
 ```
 
 After installing, don't forget to enable the bundle:
